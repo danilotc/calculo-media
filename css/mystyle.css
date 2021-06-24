@@ -29,13 +29,6 @@ div#resultado > p {
   margin: 0;
 }
 
-div.card-body > p {
-  margin: 2px 0;
-}
-div.card-body > p:last-child {
-  margin: 0;
-}
-
 img.like {
   filter: grayscale(100%);
 }

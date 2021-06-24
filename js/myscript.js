@@ -5,14 +5,13 @@ function calcular() {
   var setCalc = document.getElementsByName("rad");
   var resultado = document.querySelector("#resultado");
 
-  // Variáveis que terão seus valores atribuídos dinamicamente
+  // Variáveis que terão seus valores alterados dinamicamente
   // com base no cálculo escolhido
   var formula = "";
   var calcMedia = 0;
   var diferenca = "";
   var mediaExigida = 0;
 
-  // prettier-ignore
   if (campo1 == "" || campo2 == "") {
     alert("[ERRO] Verifique os campos e tente novamente!")
   }
@@ -37,18 +36,12 @@ function calcular() {
     }
     // Convertendo resultado para string e extraindo os três
     // primeiros caracteres para considerar apenas uma única
-    // casa decimal com precisão, sem arredondar.
-    // Além disso, formatando resultado final com bootstrap
-    // usando interpolação de string.
+    // casa decimal com precisão.
     resultado.innerHTML = `
-      <div class="card">
-        <div class="card-body">
-          <p>Média exigida: ${mediaExigida.toFixed(1)}</p>
-          <p>Fórmula: ${formula}</p>
-          <p>Média: ${calcMedia.toFixed(1)}</p>
-          <p>${diferenca}</p>
-        </div>
-      </div>
+      <p>Média exigida: ${mediaExigida.toFixed(1)}</p>
+      <p>Fórmula: ${formula}</p>
+      <p>Média: ${calcMedia.toFixed(1)}</p>
+      <p>${diferenca}</p>
     `;
   }
 }
