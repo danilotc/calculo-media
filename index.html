@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS and MyStyle -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/mystyle.css" />
+
+    <title>Cálculo de Média</title>
+  </head>
+  <body>
+    <header>
+      <h1>Cálculo de Média</h1>
+    </header>
+    <section>
+      <div id="set-dados">
+        <!-- Seleção que define a fórmula que será calculada
+        --------------------------------------------------------->
+        <div id="select-calc">
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="rad"
+              id="rad-mu"
+              checked
+            />
+            <label class="form-check-label" for="rad-mu">
+              Média das Unidades
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="rad"
+              id="rad-mf"
+            />
+            <label class="form-check-label" for="rad-mf">Média Final</label>
+          </div>
+        </div>
+
+        <!-- Campos de entrada para calcular as médias
+        ----------------------------------------------------->
+        <div class="container" id="dados-in">
+          <div class="row">
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="txtn1"
+                placeholder="1ª Nota"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                type="number"
+                class="form-control"
+                id="txtn2"
+                placeholder="2ª Nota"
+              />
+            </div>
+            <div class="col-4 d-grid grap-2 mx-auto">
+              <button
+                type="button"
+                class="btn btn-primary"
+                onclick="calcular()"
+              >
+                Calcular
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resposta com base nos dados inseridos no formulário
+      ----------------------------------------------------------------->
+      <div id="resultado">
+        <p>Preencha os dados acima para calcular!</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; Desenvolvido &#9829; por Danilo Castro</p>
+      <p>
+        <a href="https://www.linkedin.com/in/danilotc" target="_blank"
+          ><img src="img/linkedin.png" alt="linkedin"
+        /></a>
+        <a href="https://github.com/danilotc" target="_black"
+          ><img src="img/github.png" alt="linkedin"
+        /></a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS and MyScript -->
+    <script src="js/myscript.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
