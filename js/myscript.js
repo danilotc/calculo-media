@@ -8,9 +8,9 @@ function calcular() {
   // Variáveis que terão seus valores alterados dinamicamente
   // com base no cálculo escolhido
   var formula = "";
-  var calcMedia = 0;
+  var calcMedia = 0.0;
   var diferenca = "";
-  var mediaExigida = 0;
+  var mediaExigida = 0.0;
 
   if (campo1 == "" || campo2 == "") {
     alert("[ERRO] Verifique os campos e tente novamente!")
@@ -34,11 +34,11 @@ function calcular() {
         diferenca = 'Diferença: ' + String((5.0 - calcMedia).toFixed(1));
       }
     }
-    // Convertendo resultado para string e extraindo os três
-    // primeiros caracteres para considerar apenas uma única
-    // casa decimal com precisão.
+    // Considerando apenas uma única casa decimal na mediaExigida e no calcMedia. 
+    // A diferenca também está considerando uma casa decimal, mas ela está sendo
+    // convertida para string por causa da concatenação no fluxo.
     resultado.innerHTML = `
-      <p>Média exigida: ${mediaExigida.toFixed(1)}</p>
+      <p class="badge bg-danger text-wrap">Média exigida: ${mediaExigida.toFixed(1)}</p>
       <p>Fórmula: ${formula}</p>
       <p>Média: ${calcMedia.toFixed(1)}</p>
       <p>${diferenca}</p>

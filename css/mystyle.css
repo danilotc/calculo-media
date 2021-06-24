@@ -29,10 +29,6 @@ div#resultado > p {
   margin: 0;
 }
 
-img.like {
-  filter: grayscale(100%);
-}
-
 header {
   text-align: center;
 }
